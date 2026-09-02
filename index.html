@@ -19,7 +19,7 @@
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="mainNav"
-          class="icon_btn open_btn"
+          class="icon menu_btn open_btn"
         >
           <svg
             aria-hidden="true
@@ -41,8 +41,8 @@
         <nav id="mainNav" class="navigation">
           <button
             type="button"
-            aria-label="CLose Menu"
-            class="icon_btn close_btn"
+            aria-label="Close Menu"
+            class="icon menu_btn Close_btn"
           >
             <svg
               aria-hidden="true"
@@ -70,13 +70,41 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <div class="search_form-container">
+        <button
+         type="button"
+         aria-label="Search Open"
+         aria-expanded="false"
+         aria-controls="searchOverlay"
+         class="icon open_search search_btn "
+       >
+         <svg
+           aria-hidden="true"
+           xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 512 512"
+           class="ionicon"
+         >
+           <path
+             d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z"
+             fill="none"
+             stroke=""
+             stroke-miterlimit="10"
+             stroke-width="32px"
+           />
+           <path
+             d="M338.29 338.29 448 448"
+             fill="none"
+             stroke=""
+             stroke-linecap="round"
+             stroke-miterlimit="10"
+             stroke-width="32px"
+           />
+         </svg>
+       </button>
+       <div class="search_form-overlay" id="searchOverlay">
           <button
             type="button"
-            aria-label="Search Open"
-            aria-expanded="false"
-            aria-controls="searchOverlay"
-            class="icon_btn search_btn"
+            aria-label="Close Search"
+            class="icon search_btn Close_search"
           >
             <svg
               aria-hidden="true"
@@ -85,23 +113,15 @@
               class="ionicon"
             >
               <path
-                d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z"
-                fill="none"
-                stroke=""
-                stroke-miterlimit="10"
-                stroke-width="32px"
-              />
-              <path
-                d="M338.29 338.29 448 448"
+                d="M368 368 144 144M368 144 144 368"
                 fill="none"
                 stroke=""
                 stroke-linecap="round"
-                stroke-miterlimit="10"
+                stroke-linejoin="round"
                 stroke-width="32px"
               />
             </svg>
           </button>
-          <div class="search_form-overlay" id="searchOverlay">
             <form class="search_form">
               <label for="search_input">Search</label>
               <input
@@ -133,8 +153,7 @@
                 />
               </svg>
             </form>
-          </div>
-        </div>
+       </div>
       </div>
     </header>
     <main class="main">
@@ -156,7 +175,7 @@
             <figure class="figure">
               <img src="images/soho_10.jpg" alt="placeholder text" />
             </figure>
-            <div class="category">Travel</div>
+            <div class="story_category">Travel</div>
             <h3 class="blog-heading">Revolve in Mexico</h3>
             <time datetime="2026-08-15">Aug 15, 2026</time>
           </article>
@@ -164,7 +183,7 @@
             <figure class="figure">
               <img src="images/soho_11.jpg" alt="placeholder" />
             </figure>
-            <div class="category">Travel</div>
+            <div class="story_category">Travel</div>
             <h3 class="blog-heading">Revolve in Mexico</h3>
             <time datetime="2026-08-15">Aug 15, 2026</time>
           </article>
@@ -172,7 +191,7 @@
             <figure class="figure">
               <img src="images/soho_12.jpg" alt="placeholder" />
             </figure>
-            <div class="category">Travel</div>
+            <div class="story_category">Travel</div>
             <h3 class="blog-heading">Revolve in Mexico</h3>
             <time datetime="2026-08-15">Aug 15, 2026</time>
           </article>
@@ -180,7 +199,7 @@
             <figure class="figure">
               <img src="images/soho_13.jpg" alt="placeholder" />
             </figure>
-            <div class="category">Travel</div>
+            <div class="story_category">Travel</div>
             <h3 class="blog-heading">Revolve in Mexico</h3>
             <time datetime="2026-08-15">Aug 15, 2026</time>
           </article>
@@ -188,7 +207,7 @@
             <figure class="figure">
               <img src="images/soho_14.jpg" alt="placeholder" />
             </figure>
-            <div class="category">Travel</div>
+            <div class="story_category">Travel</div>
             <h3 class="blog-heading">Revolve in Mexico</h3>
             <time datetime="2026-08-15">Aug 15, 2026</time>
           </article>
@@ -198,7 +217,11 @@
         <div class="main_content">
           <article class=" item full_width">
             <header>
-              <div class="category">Lifestyle</div>
+              <div class="category">
+                <span>
+                  Lifestyle
+                </span>
+              </div>
               <h2 class="blog_heading">Natural Summer</h2>
             </header>
 
@@ -305,7 +328,7 @@
                 <img src="images/soho_16.jpg" alt="placeholder" />
               </figure>
               <header>
-              <div class="category">Lifestyle</div>
+              <div class="category"><span>Lifestyle</span></div>
               <h2 class="blog_heading">Natural Summer</h2>
             </header>
             <div class="blog_content">
@@ -368,7 +391,7 @@
                 <img src="images/soho_17.jpg" alt="placeholder" />
               </figure>
               <header>
-              <div class="category">Lifestyle</div>
+              <div class="category"><span> Lifestyle</span></div>
               <h2 class="blog_heading">Natural Summer</h2>
             </header>
             <div class="blog_content">
@@ -431,7 +454,7 @@
                 <img src="images/soho_18.jpg" alt="placeholder" />
               </figure>
               <header>
-              <div class="category">Lifestyle</div>
+              <div class="category"><span>Lifestyle</span> </div>
               <h2 class="blog_heading">Natural Summer</h2>
             </header>
             <div class="blog_content">
@@ -494,7 +517,7 @@
                 <img src="images/soho_1.jpg" alt="placeholder" />
               </figure>
               <header>
-              <div class="category">Lifestyle</div>
+              <div class="category"><span>Lifestyle</span></div>
               <h2 class="blog_heading">Natural Summer</h2>
             </header>
             <div class="blog_content">
@@ -604,7 +627,7 @@
                 <button class="play_btn" aria-label="Play Video">
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M133 440a35.37 35.37 0 0 1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37 7.46-27.53 19.46-34.33a35.13 35.13 0 0 1 35.77.45l247.85 148.36a36 36 0 0 1 0 61l-247.89 148.4A35.5 35.5 0 0 1 133 440"/></svg>
                 </button>
-                <img class="yt_thumb" src="" alt="placeholder">
+                <img class="yt_thumb" src="images/travel_thumbnail.png" alt="placeholder">
               </div>
              
             </figure>
@@ -615,7 +638,7 @@
                 <img src="images/soho_2.jpg" alt="placeholder" />
               </figure>
               <header>
-              <div class="category">Lifestyle</div>
+              <div class="category"><span>Lifestyle</span></div>
               <h2 class="blog_heading">Natural Summer</h2>
             </header>
             <div class="blog_content">
@@ -678,7 +701,7 @@
                 <img src="images/soho_3.jpg" alt="placeholder" />
               </figure>
               <header>
-              <div class="category">Lifestyle</div>
+              <div class="category"><span>Lifestyle</span></div>
               <h2 class="blog_heading">Natural Summer</h2>
             </header>
             <div class="blog_content">
