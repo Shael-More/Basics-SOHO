@@ -10,7 +10,7 @@
 */
 
 :root {
-  --blue: #d5d8f5;
+  --blue: #5d69d5;
   --green: #098a31;
   --gold: #7a7110;
   --dark_green: #83b29f;
@@ -21,6 +21,7 @@
   --gray: #eaeaea;
   --dk-gray: #717873;
   --lt-gray: #f8f8f8;
+  --black-shade:#323131;
 }
 
 html {
@@ -73,13 +74,17 @@ svg {
   margin: 0 auto;
 }
 
-.access-hidden {
+.main .wrap {
+  padding: 0 1rem;
+}
+
+.access_hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  /* white-space:; */
+  white-space: nowarp;
   width: 1px;
 }
 
@@ -155,6 +160,7 @@ h4 {
 }
 
 .main_nav a {
+  color: var(--white);
   text-decoration-color: transparent;
   text-underline-offset: 8px;
   text-transform: uppercase;
@@ -167,7 +173,6 @@ h4 {
 .main_nav a:active {
   text-decoration-color: var(--white);
 }
-
 
 /* Search */
 .search_form-overlay {
@@ -186,7 +191,7 @@ h4 {
   position: relative;
   width: 100%;
   height: 100%;
-  aspect-ratio:16 / 5 ;
+  aspect-ratio: 16 / 6;
   z-index: 0;
 }
 
@@ -205,33 +210,35 @@ h4 {
   letter-spacing: 1px;
   margin: 0;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgba(0,0,0, 50%);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 50%);
 }
 .hero_section .figure {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;                         
+  z-index: 1;
 }
 
 .hero_section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
-
 
 /* story items */
 
+.stories {
+  margin: 0 0 8rem;
+  border-bottom: 2px solid var(--gray);
+}
 .secondary_heading {
   font-size: 2rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  margin: 0 0 2rem;
+  margin: 2rem 0;
 }
 
 .story_wrap {
@@ -257,20 +264,22 @@ h4 {
   line-height: 1;
   padding: 0.5rem 1rem;
   margin-left: 50%;
+  margin-bottom: 1rem;
   transform: translate(-50%, -0.5rem);
   background-color: var(--white);
   color: var(--gold);
 }
 
-.blog-heading {
+.blog_heading {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
+  line-height: 1.5;
 }
 
-.story time{
+.story time {
   display: block;
   font-family: 'Times New Roman', Times, serif;
   font-size: 0.9rem;
@@ -307,12 +316,11 @@ h4 {
   color: var(--gold);
   background-color: var(--white);
   text-align: center;
-
 }
 
 .main_content .category::after {
   content: '';
-  position: relative; 
+  position: relative;
   transform: translateY(-1rem);
   display: block;
   width: 200px;
@@ -321,3 +329,207 @@ h4 {
   border-bottom: 2px solid var(--gold);
   z-index: -1;
 }
+
+.main_content .figure {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.5 / 1;
+}
+
+.main_content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main_content p:has(a) {
+  text-align: center;
+}
+
+.main_content a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+  transition: text-decoration-color 300ms ease-in-out;
+}
+
+.main_content a:focus,
+.main_content a:hover,
+.main_content a:active {
+  text-decoration-color: transparent;
+}
+
+.main_content .meta {
+  display: flex;
+  flex-wrap: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 3rem 0;
+  border-top: 2px dashed var(--dk-gray);
+  border-bottom: 2px dashed var(--dk-gray);
+}
+
+.article_grid .meta {
+  border-bottom: none;
+}
+
+.main_content .left_side {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--dk-gray);
+  line-height: 1;
+}
+
+.main_content .left_side svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  stroke: var(--dk-gray);
+  margin-right: 0.5rem;
+}
+
+.main_content .left_side time::after {
+  content: '/';
+  display: inline-block;
+  padding: 0 0.25rem;
+  margin: 0 0.5rem;
+}
+
+.main_content .right_side {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main_content .right_side a {
+  display: block;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: transparent 300ms ease-in-out;
+  transition: background-color;
+}
+
+.main_content .right_side a:focus,
+.main_content .right_side a:hover,
+.main_content .right_side a:active {
+  background-color: var(--green);
+}
+
+.main_content .right_side svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--dk-gray);
+  stroke: var(--dk-gray);
+  transition:
+    fill 300ms ease-in-out,
+    stroke 300ms ease-in-out;
+}
+
+.main_content .right_side a:focus svg,
+.main_content .right_side a:hover svg,
+.main_content .right_side a:active svg {
+  fill: var(--white);
+  stroke: var(--white);
+}
+
+/* Article grid */
+.article_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.article_grid .figure {
+  margin: 0 0 2rem;
+}
+
+
+/* Click to load video */
+
+.video_section {
+  padding: 0;
+  position: relative;
+  z-index: 0;
+  margin: 0 0 3rem;
+}
+
+.video_header {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient(to top, var(--black-shade), var(--black-shade), transparent);
+}
+.video_header .blog_heading {
+  color: var(--white);
+}
+.video_header .meta {
+  border-top: 1px solid var(--dk-gray);
+  border-bottom: none;
+  margin: 0 3rem 1rem;
+  justify-content: center;
+}
+
+.video_header .meta .left_side {
+  color: var(--white);
+
+}
+
+
+.video_header .meta .left_side svg {
+  stroke: var(--white);
+}
+.yt_video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  z-index: 0;
+}
+
+.video_section .yt_video-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  
+}
+ .play_btn {
+  padding: 0.5rem;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ border-radius: 5px;
+ background-color: rgba(255,255,255, 50%);
+ transition: background-color 300ms ease-in-out;
+}
+
+.play_btn:focus,
+.play_btn:hover,
+.play_btn:active {
+  background-color: var(--white);
+}
+.play_btn svg {
+  width: 3rem ;
+  height: 3rem;
+  
+}
+.yt_video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
